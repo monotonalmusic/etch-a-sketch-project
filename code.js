@@ -8,7 +8,7 @@ Add extra grid sizes, colors etc.
 */
 
 function createGrid (x) {
-    let d = document.body; //refers to document; will be used to append divs to
+    let d = document.getElementById("container"); //refers to document; will be used to append divs to
         for (i = 0; i < x; i++) {
             //create x number of row divs
             let row = document.createElement("div");
@@ -16,7 +16,7 @@ function createGrid (x) {
             for (z = 1; z <= x; z++) {
                 let cell = document.createElement("div");
                 cell.className = "gridsquare";
-                cell.innerText = (i * x) + z
+                // cell.innerText = (i * x) + z
                 row.appendChild(cell);
             }
             d.appendChild(row)
@@ -26,3 +26,8 @@ function createGrid (x) {
 document.getElementById("16-button").addEventListener("click", function (){
     createGrid (16);
 });
+
+document.getElementById("32-button").addEventListener("click", function (){
+    createGrid (32);
+});
+

@@ -1,0 +1,36 @@
+body {
+    margin: 100px;
+}
+
+#buttons {
+    display: flex;
+    flex-flow: column;
+}
+
+#content {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+#container {
+    display: flex;
+    max-height: 600px;
+    min-height: 600px;
+    max-width: 600px;
+    min-width: 600px;
+    
+}
+
+.gridsquare {
+    border: solid 2px black;
+    height: 25px;
+    width: 25px;
+    /* color: white; */
+    
+}
+
+button {
+    height: 50px;
+    width: 100px;
+}

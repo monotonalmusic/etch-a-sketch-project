@@ -7,8 +7,32 @@ Add stylizing
 Add extra grid sizes, colors etc.
 */
 
-function createGrid (x) {
-    let d = document.getElementById("container"); //refers to document; will be used to append divs to
+//creates grid making variables to then use in CSS with display:grid
+function createGrid (rows, cols) {
+    document.getElementById("container").innerHTML = " "; //resets container div, making them not overlap infinitely
+    let d = document.getElementById("container"); //refers to document; will be used to append divs to  
+    container.style.setProperty('--grid-rows', rows);
+    container.style.setProperty('--grid-cols', cols);
+    for (i = 0; i < (rows * cols); i++) {
+        let cell = document.createElement("div");
+        cell.className = "gridsquare";
+        container.appendChild(cell);
+    }
+
+
+}
+document.getElementById("16-button").addEventListener("click", function (){
+    createGrid (16, 16);
+});
+
+document.getElementById("32-button").addEventListener("click", function (){
+    createGrid (32, 32);
+});
+
+//created Grid with individual divs for rows and columns
+/*function createGrid (x) {
+    document.getElementById("container").innerHTML = " "; //resets container div, making them not overlap infinitely
+    let d = document.getElementById("container"); //refers to document; will be used to append divs to  
         for (i = 0; i < x; i++) {
             //create x number of row divs
             let row = document.createElement("div");
@@ -22,12 +46,4 @@ function createGrid (x) {
             d.appendChild(row)
         }
 }
-
-document.getElementById("16-button").addEventListener("click", function (){
-    createGrid (16);
-});
-
-document.getElementById("32-button").addEventListener("click", function (){
-    createGrid (32);
-});
-
+*/

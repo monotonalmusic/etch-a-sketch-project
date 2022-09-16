@@ -9,27 +9,33 @@ body {
 
 #content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1100px;
     /* align-items: center; */
 }
 
+
 #container {
-    display: flex;
-    max-height: 600px;
+    display: grid;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
     min-height: 600px;
-    max-width: 600px;
+    min-width: 600px;
+    max-height: 600px;
     min-width: 600px;
     
 }
 
 .gridsquare {
     border: solid 2px black;
-    height: 25px;
-    width: 25px;
     /* color: white; */
     
 }
 
+#buttons {
+    gap: 20px;
+}
 button {
     height: 50px;
     width: 100px;

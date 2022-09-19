@@ -1,10 +1,12 @@
 body {
     margin: 100px;
+    background-color: beige;
 }
 
 #buttons {
     display: flex;
     flex-flow: column;
+    gap: 20px;
 }
 
 #content {
@@ -27,15 +29,17 @@ body {
     
 }
 
-.gridsquare {
+#square {
     border: solid 2px black;
     /* color: white; */
     
 }
 
-#buttons {
-    gap: 20px;
+.activated {
+    background-color: black;
 }
+
+
 button {
     height: 50px;
     width: 100px;

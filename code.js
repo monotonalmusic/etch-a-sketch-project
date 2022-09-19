@@ -9,8 +9,15 @@ Add extra grid sizes, colors etc.
 const container = document.getElementById('container');
 const square = document.getElementsByClassName('square');
 let mouseDown = false
-// document.body.onmousedown = () => (mouseDown = true)
-// document.body.onmousup = () => (mouseDown = false)
+let colorMode = 'default'
+
+const rainbowbutton = document.getElementById('rainbow-button')
+const eraserbutton = document.getElementById('eraser-button')
+
+rainbowbutton.onclick = () => colorMode = 'rainbow';
+eraserbutton.onclick = () => colorMode = 'erase'
+
+
 
 function enableToggle (e) {
     mouseDown = true;
@@ -28,7 +35,18 @@ function toggle (e) {
     if (mouseDown === false) {
         return
     }
-    e.target.classList.toggle('active');
+    else if (colorMode === 'default') {
+        e.target.style.backgroundColor = 'black'
+    }
+    else if (colorMode === 'rainbow') {
+        const randomR = Math.floor(Math.random() * 256)
+        const randomG = Math.floor(Math.random() * 256)
+        const randomB = Math.floor(Math.random() * 256)
+        e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
+    }
+    else if (colorMode === 'erase') {
+        e.target.style.backgroundColor = 'beige'
+    }
 }
 
 

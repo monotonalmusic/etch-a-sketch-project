@@ -29,13 +29,13 @@ body {
     
 }
 
-#square {
+.square {
     border: solid 2px black;
     /* color: white; */
     
 }
 
-.activated {
+.active {
     background-color: black;
 }
 

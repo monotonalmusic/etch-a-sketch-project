@@ -6,26 +6,53 @@ Make reset button
 Add stylizing
 Add extra grid sizes, colors etc.
 */
+const container = document.getElementById('container');
+const square = document.getElementsByClassName('square');
+let mouseDown = false
+// document.body.onmousedown = () => (mouseDown = true)
+// document.body.onmousup = () => (mouseDown = false)
+
+function enableToggle (e) {
+    mouseDown = true;
+
+    if (e.target !== container) {
+        toggle(e)
+    }
+}
+
+function disableToggle () {
+    mouseDown = false
+}
+
+function toggle (e) {
+    if (mouseDown === false) {
+        return
+    }
+    e.target.classList.toggle('active');
+}
+
+
+
+
+
 
 //creates grid making variables to then use in CSS with display:grid
 function createGrid (rows, cols) {
     document.getElementById("container").innerHTML = " "; //resets container div, making them not overlap infinitely 
     container.style.setProperty('--grid-rows', rows);
     container.style.setProperty('--grid-cols', cols);
+    container.onmousedown = enableToggle;
     for (i = 0; i < (rows * cols); i++) {
         let cell = document.createElement("div");
-        cell.id = 'square';
-        cell.addEventListener('mousedown', function (){ cell.style.backgroundColor = 'black' });
+        cell.classList = 'square';
+        cell.onmouseenter = toggle;
+        // cell.addEventListener('mousedown', function (){ cell.style.backgroundColor = 'black' });
         container.appendChild(cell);
     }
-
+    container.onmouseup = disableToggle;
 
 }
 
-//experiment
-let mouseDown = false
-document.body.onmousedown = () => (mouseDown = true)
-document.body.onmousup = () => (mouseDown = false)
 
 
 

@@ -11,6 +11,9 @@ const square = document.getElementsByClassName('square');
 const gengrid = document.getElementById('gengrid')
 let mouseDown = false
 let colorMode = 'default'
+window.addEventListener('load', function(){
+    createGrid(16,16)
+});
 
 //slider stuff
 let slider = document.getElementById("myRange")
@@ -29,12 +32,15 @@ gengrid.addEventListener('click', function (){
 
 const rainbowbutton = document.getElementById('rainbow-button')
 const eraserbutton = document.getElementById('eraser-button')
+const blackbutton = document.getElementById('black-button')
 const clearbutton = document.getElementById('clear-button')
 
 
 rainbowbutton.onclick = () => colorMode = 'rainbow'; 
 eraserbutton.onclick = () => colorMode = 'erase'
+blackbutton.onclick = () => colorMode = 'default'
 clearbutton.onclick = () => document.getElementById("container").innerHTML = " "
+
 
 
 

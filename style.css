@@ -1,6 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@400;600&display=swap');
+
 body {
     margin: 100px;
     background-color: beige;
+}
+h1 {
+    font-family: 'Cairo Play', cursive;
+    text-align: center;
+    font-weight: 600;
+}
+p {
+    font-family: 'Cairo Play', cursive;
 }
 
 #buttons {
@@ -24,6 +35,14 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+
+#inputfield {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
 #gengrid {
@@ -94,6 +113,7 @@ body {
 button {
     height: 50px;
     width: 100px;
+    font-family: 'Cairo Play', cursive;
 }
 
 #gridnum {

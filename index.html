@@ -8,12 +8,23 @@
     <title>Etch-a-sketch</title>
 </head>
 <body>
+    <div id="top-content"> 
+        <label for="gridnum"></label>
+        <input type="number" placeholder="2-64" id="gridnum" name="gridnum" min="2" max="164">
+        <button id="gengrid">Create Grid</button>
+        <div class="slidecontainer">
+            <input type="range" min="2" max="64" value="32" class="slider" id="myRange">
+            <p>Value: <span id="slidervalue"></span></p>
+        </div>
+    </div>
+    
     <div id="content">
         <div id="buttons">
-            <button id="16-button">16x16</button>
-            <button id="32-button">32x32</button>
+            <!-- <button id="16-button">16x16</button>
+            <button id="32-button">32x32</button> -->
             <button id="rainbow-button">Rainbow</button> 
             <button id="eraser-button">Eraser</button> 
+            <button id="clear-button">Clear</button> 
         </div>
         <div id="container">
 

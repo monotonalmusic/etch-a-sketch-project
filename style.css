@@ -17,9 +17,15 @@ body {
     /* align-items: center; */
 }
 
+#top-content {
+    display: flex;
+    justify-content: center;
+}
+
 
 #container {
     display: grid;
+    border: solid 3px #654321;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
     min-height: 600px;

@@ -8,14 +8,33 @@ Add extra grid sizes, colors etc.
 */
 const container = document.getElementById('container');
 const square = document.getElementsByClassName('square');
+const gengrid = document.getElementById('gengrid')
 let mouseDown = false
 let colorMode = 'default'
 
+//slider stuff
+let slider = document.getElementById("myRange")
+let output = document.getElementById("slidervalue")
+output.innerHTML = slider.value
+slider.oninput = function (){
+    output.innerHTML = this.value
+    let gridnum = this.value
+    createGrid(gridnum, gridnum)
+}
+
+gengrid.addEventListener('click', function (){
+    let gridnum = document.getElementById('gridnum').value;
+    createGrid (gridnum, gridnum)
+});
+
 const rainbowbutton = document.getElementById('rainbow-button')
 const eraserbutton = document.getElementById('eraser-button')
+const clearbutton = document.getElementById('clear-button')
 
-rainbowbutton.onclick = () => colorMode = 'rainbow';
+
+rainbowbutton.onclick = () => colorMode = 'rainbow'; 
 eraserbutton.onclick = () => colorMode = 'erase'
+clearbutton.onclick = () => document.getElementById("container").innerHTML = " "
 
 
 
@@ -59,28 +78,29 @@ function createGrid (rows, cols) {
     document.getElementById("container").innerHTML = " "; //resets container div, making them not overlap infinitely 
     container.style.setProperty('--grid-rows', rows);
     container.style.setProperty('--grid-cols', cols);
+    //toggle is enabled if mouse is down
     container.onmousedown = enableToggle;
     for (i = 0; i < (rows * cols); i++) {
         let cell = document.createElement("div");
         cell.classList = 'square';
+        //if mouse is down AND mouse enters the div, then proceed to color
         cell.onmouseenter = toggle;
-        // cell.addEventListener('mousedown', function (){ cell.style.backgroundColor = 'black' });
         container.appendChild(cell);
     }
+    //toggle is disabled if mouse is up
     container.onmouseup = disableToggle;
 
 }
 
 
 
+// document.getElementById("16-button").addEventListener("click", function (){
+//     createGrid (16, 16);
+// });
 
-document.getElementById("16-button").addEventListener("click", function (){
-    createGrid (16, 16);
-});
-
-document.getElementById("32-button").addEventListener("click", function (){
-    createGrid (32, 32);
-});
+// document.getElementById("32-button").addEventListener("click", function (){
+//     createGrid (32, 32);
+// });
 
 // problem is that I need to add activated to the specific gridsquare that is clicked
 

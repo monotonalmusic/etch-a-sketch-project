@@ -6,7 +6,8 @@ body {
 #buttons {
     display: flex;
     flex-flow: column;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
 }
 
 #content {
@@ -18,10 +19,54 @@ body {
 }
 
 #top-content {
+    margin-left: 300px;
+    margin-right: 300px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
 
+#gengrid {
+    height: 30px;
+}
+
+.slidecontainer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 200px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 90%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #228b22;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #228b22;
+    cursor: pointer;
+  }
 
 #container {
     display: grid;
@@ -36,7 +81,7 @@ body {
 }
 
 .square {
-    border: solid 2px black;
+    border: solid 1px #654321;
     /* color: white; */
     
 }
@@ -48,5 +93,10 @@ body {
 
 button {
     height: 50px;
+    width: 100px;
+}
+
+#gridnum {
+    height: 25px;
     width: 100px;
 }

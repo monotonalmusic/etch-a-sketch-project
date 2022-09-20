@@ -93,22 +93,6 @@ function createGrid (rows, cols) {
 }
 
 
-
-// document.getElementById("16-button").addEventListener("click", function (){
-//     createGrid (16, 16);
-// });
-
-// document.getElementById("32-button").addEventListener("click", function (){
-//     createGrid (32, 32);
-// });
-
-// problem is that I need to add activated to the specific gridsquare that is clicked
-
-// document.getElementById("square").addEventListener("mousedown"), function (){
-//     document.getElementById("square").style.backgroundColor = 'black';
-
-// }
-
     
 //add function to add activated element to gridsquare when mousedown
 

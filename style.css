@@ -13,12 +13,56 @@ h1 {
 p {
     font-family: 'Cairo Play', cursive;
 }
+#container {
+    display: grid;
+    border: solid 3px #654321;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    min-height: 600px;
+    min-width: 600px;
+    max-height: 600px;
+    min-width: 600px;
+    
+}
+
+.square {
+    border: solid 1px #654321;
+    /* color: white; */
+    
+}
+
+.active {
+    background-color: black;
+}
+
 
 #buttons {
     display: flex;
     flex-flow: column;
     justify-content: center;
     gap: 30px;
+}
+
+button {
+    border: solid 2px #654321;
+    height: 50px;
+    width: 100px;
+    font-family: 'Cairo Play', cursive;
+    font-weight: 600;
+    transition-duration: 0.4ms;
+}
+
+button:hover {
+    background-color: lightgrey;
+
+}
+
+button:active {
+    background-color: grey
+}
+
+.currentmode {
+    background-color: lightgrey;
 }
 
 #content {
@@ -43,6 +87,12 @@ p {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+}
+
+#gridnum {
+    height: 25px;
+    width: 100px;
+    border: solid 2px #654321;
 }
 
 #gengrid {
@@ -91,53 +141,9 @@ p {
     font-weight: 600;
   }
 
-#container {
-    display: grid;
-    border: solid 3px #654321;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
-    min-height: 600px;
-    min-width: 600px;
-    max-height: 600px;
-    min-width: 600px;
-    
-}
-
-.square {
-    border: solid 1px #654321;
-    /* color: white; */
-    
-}
-
-.active {
-    background-color: black;
-}
 
 
-button {
-    border: solid 2px #654321;
-    height: 50px;
-    width: 100px;
-    font-family: 'Cairo Play', cursive;
-    font-weight: 600;
-    transition-duration: 0.4ms;
-}
 
-button:hover {
-    background-color: lightgrey;
 
-}
 
-button:active {
-    background-color: grey
-}
 
-.currentmode {
-    background-color: lightgrey;
-}
-
-#gridnum {
-    height: 25px;
-    width: 100px;
-    border: solid 2px #654321;
-}

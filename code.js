@@ -106,12 +106,12 @@ document.getElementById('gridnum').addEventListener( 'keypress', function (e) {
     }
 });
 
-function updateGrid (val, emitter) { 
+// function updateGrid (val, emitter) { 
     //function UpdateGrid(val, emitter){
     //Updates slider position if emitter != slider
     //Updates input field if emitter != inputfild
     //Updates slider number if emitter 
     //createGrid(val, val)
-};
+// };
 
 

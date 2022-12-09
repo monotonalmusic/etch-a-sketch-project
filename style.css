@@ -1,8 +1,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@400;600&display=swap');
-
+html {
+    font-size: 10px;
+}
 body {
-    margin: 100px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
     background-color: beige;
 }
 h1 {
@@ -15,18 +22,18 @@ p {
 }
 #container {
     display: grid;
-    border: solid 3px #654321;
+    border: solid .3rem #654321;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
-    min-height: 600px;
-    min-width: 600px;
-    max-height: 600px;
-    min-width: 600px;
+    min-height: 60rem;
+    min-width: 60rem;
+    max-height: 60rem;
+    min-width: 60rem;
     
 }
 
 .square {
-    border: solid 1px #654321;
+    border: solid .1rem #654321;
     /* color: white; */
     
 }
@@ -40,13 +47,13 @@ p {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    gap: 30px;
+    gap: 3rem;
 }
 
 button {
-    border: solid 2px #654321;
-    height: 50px;
-    width: 100px;
+    border: solid .2rem #654321;
+    height: 5rem;
+    width: 10rem;
     font-family: 'Cairo Play', cursive;
     font-weight: 600;
     transition-duration: 0.4ms;
@@ -67,18 +74,16 @@ button:active {
 
 #content {
     display: flex;
-    justify-content: center;
-    gap: 60px;
-    max-width: 1100px;
-    /* align-items: center; */
+    position: absolute;
+    top: 28%;
+    left: 31rem;
+    gap: 6rem;
+
 }
 
 #top-content {
-    margin-left: 200px;
-    margin-right: 200px;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    gap: 10rem;
 }
 
 
@@ -86,30 +91,30 @@ button:active {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 2rem;
 }
 
 #gridnum {
-    height: 25px;
-    width: 100px;
-    border: solid 2px #654321;
+    height: 2.5rem;
+    width: 10rem;
+    border: solid .2rem #654321;
 }
 
 #gengrid {
-    height: 30px;
+    height: 3rem;
 }
 
 .slidecontainer {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   width: 200px;
+   width: 20rem;
 }
 
 .slider {
     -webkit-appearance: none;
     width: 90%;
-    height: 25px;
+    height: 2.5rem;
     background: #d3d3d3;
     outline: none;
     opacity: 0.7;
@@ -124,15 +129,15 @@ button:active {
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 25px;
-    height: 25px;
+    width: 2.5rem;
+    height: 2.5rem;
     background: #228b22;
     cursor: pointer;
   }
   
   .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
+    width: 2.5rem;
+    height: 2.5rem;
     background: #228b22;
     cursor: pointer;
   }

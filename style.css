@@ -16,10 +16,22 @@ h1 {
     font-family: 'Cairo Play', cursive;
     text-align: center;
     font-weight: 600;
+    font-size: 5rem;
 }
 p {
     font-family: 'Cairo Play', cursive;
 }
+
+
+#bigContainer {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 3rem;
+
+}
+
 #container {
     display: grid;
     border: solid .3rem #654321;
@@ -74,9 +86,9 @@ button:active {
 
 #content {
     display: flex;
-    position: absolute;
-    top: 28%;
-    left: 31rem;
+    /* position: absolute; */
+    /* top: 26%; */
+    /* left: 26%; */
     gap: 6rem;
 
 }

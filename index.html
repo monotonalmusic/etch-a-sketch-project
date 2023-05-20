@@ -8,36 +8,34 @@
     <title>Etch-a-sketch</title>
 </head>
 <body>
-    <h1>ETCH-A-SKETCH</h1>
-    <div id="top-content">
-        <div id="inputfield">
-            <label for="gridnum"></label>
-            <input type="number" placeholder="2-32" id="gridnum" name="gridnum" min="2" max="32">
-            <button id="gengrid">Create Grid</button>
-        </div> 
-        <div class="slidecontainer">
-            <input type="range" min="2" max="32" value="16" class="slider" id="myRange">
-            <p>  <span id="slidervalue"></span></p>
+        <h1 id="title">ETCH-A-SKETCH</h1>
+        <div id="bigContainer">
+            <div id="top-content">
+                <div id="inputfield">
+                    <label for="gridnum"></label>
+                    <input type="number" placeholder="2-32" id="gridnum" name="gridnum" min="2" max="32">
+                    <button id="gengrid">Create Grid</button>
+                </div> 
+                <div class="slidecontainer">
+                    <input type="range" min="2" max="32" value="16" class="slider" id="myRange">
+                    <p>  <span id="slidervalue"></span></p>
+                </div>
+            </div>
+            
+            <div id="content">
+                <div id="buttons">
+                    <!-- <button id="16-button">16x16</button>
+                    <button id="32-button">32x32</button> -->
+                    <button id="black-button">Black</button>
+                    <button id="rainbow-button">Rainbow</button> 
+                    <button id="eraser-button">Eraser</button> 
+                    <button id="clear-button">Clear</button> 
+                </div>
+                <div id="container">
+
+                </div>
+            </div>
         </div>
-    </div>
-    
-    <div id="content">
-        <div id="buttons">
-            <!-- <button id="16-button">16x16</button>
-            <button id="32-button">32x32</button> -->
-            <button id="black-button">Black</button>
-            <button id="rainbow-button">Rainbow</button> 
-            <button id="eraser-button">Eraser</button> 
-            <button id="clear-button">Clear</button> 
-        </div>
-        <div id="container">
-
-        </div>
-    </div>
-
-
-
-
 
 <script src="code.js"></script>    
 </body>
